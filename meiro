@@ -56,6 +56,12 @@ let rects3 =[
   [450,80,150,5],
   [595,80,5,330],
 ]
+let rects4 =[
+  [0,0,600,10],
+  [0,0,10,400],
+  [590,0,10,400],
+  [390,0,600,10],
+]
 
 function setup() {
   createCanvas(600, 400);
@@ -97,6 +103,11 @@ else if(stage==3){
 if(stage==3){
   rect(275,0,70,400)
 }  
+  
+if(stage==4){ 
+  rects4.forEach(r4=>{
+    rect(r4[0],r4[1],r4[2],r4[3])
+  })}  
   
   drawPlayer()
   
@@ -176,6 +187,26 @@ if(stage==3){
        player.x+30<sute[0]+sute[2]&&
        sute[1]<player.y+30&&
        player.y+30<sute[1]+sute[3]){
+       player = {x:startpositionx,y:startpositiony};
+    }    
+  })}     
+  
+if(stage==4){
+  rects4.forEach(r4=>{
+  if(r4[0]<player.x&&
+       player.x<r4[0]+r4[2]&&
+       r4[1]<player.y&&
+       player.y<r4[1]+r4[3]){
+       player = {x:startpositionx,y:startpositiony};  
+  }
+  })}      
+
+if(stage==4){
+  rects4.forEach(r4=>{
+    if(r4[0]<player.x+30&&
+       player.x+30<r4[0]+r4[2]&&
+       r4[1]<player.y+30&&
+       player.y+30<r4[1]+r4[3]){
        player = {x:startpositionx,y:startpositiony};
     }    
   })}     
