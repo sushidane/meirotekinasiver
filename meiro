@@ -68,6 +68,7 @@ function setup() {
   background(220);
   player = {x:53,y:318};
   stage=1
+  textSize(30);
 }
 
 function drawPlayer(){
@@ -210,6 +211,10 @@ if(stage==4){
        player = {x:startpositionx,y:startpositiony};
     }    
   })}     
+  
+if(stage==4){
+  text("ゲームクリア",300,200);
+}  
   
   if(keyCode === RIGHT_ARROW){
     player.x +=3;
