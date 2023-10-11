@@ -161,21 +161,21 @@ if(stage==3){
   })}   
   
 if(stage==3){
-  stesann.forEach(r4=>{
-  if(r4[0]<player.x&&
-       player.x<r4[0]+r4[2]&&
-       r4[1]<player.y&&
-       player.y<r4[1]+r4[3]){
+  stesan.forEach(sute=>{
+  if(sute[0]<player.x&&
+       player.x<sute[0]+sute[2]&&
+       sute[1]<player.y&&
+       player.y<sute[1]+sute[3]){
        player = {x:startpositionx,y:startpositiony};  
   }
   })}      
   
 if(stage==3){
-  stesann.forEach(r4=>{
-    if(r4[0]<player.x+30&&
-       player.x+30<r4[0]+r4[2]&&
-       r4[1]<player.y+30&&
-       player.y+30<r4[1]+r4[3]){
+  stesan.forEach(sute=>{
+    if(sute[0]<player.x+30&&
+       player.x+30<sute[0]+sute[2]&&
+       sute[1]<player.y+30&&
+       player.y+30<sute[1]+sute[3]){
        player = {x:startpositionx,y:startpositiony};
     }    
   })}     
@@ -198,13 +198,15 @@ if(stage==3){
     startpositiony=318
   }
   else if(stage==2){
-    //startpositionx=280
-    //startpositiony=174    
-   startpositionx=520
-   startpositiony=40 
+    startpositionx=280
+    startpositiony=174    
   }
   else if(stage==3){
-    startpositionx=0
-    startpositiony=0
+    startpositionx=5
+    startpositiony=5
+  }
+  else if(stage==4){
+    startpositionx=275
+    startpositiony=175
   }
 }
